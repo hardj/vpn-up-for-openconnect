@@ -331,7 +331,7 @@ function stop() {
             printf "Connected ...\nRemoving $PID_FILE_PATH ...\n"
             printf "$RESET"
             local pid=$(cat $PID_FILE_PATH)
-            kill -9 $pid > /dev/null 2>&1
+            sudo kill $pid > /dev/null 2>&1
             rm -f $PID_FILE_PATH > /dev/null 2>&1
             printf "$SUCCESS"
             printf "Disconnected ...\n"
